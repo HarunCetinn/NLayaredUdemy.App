@@ -24,7 +24,11 @@ builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
 builder.Services.AddAutoMapper(typeof(MapProfile));
 //Cannot instantiate implementation type 'NLayer.Core.Repositories.IGenericRepository`1[T]'
 //for service type 'NLayer.Core.Repositories.IGenericRepository`1[T]'.'
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 
 
